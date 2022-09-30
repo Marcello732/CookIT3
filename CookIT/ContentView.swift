@@ -53,16 +53,17 @@ struct ContentView: View {
 
 struct DiscoverView: View {
     var body: some View {
-        NavigationView {
-            List(recipes) {recipe in
-                NavigationLink {
-                    //RecipeDetail()
-                } label: {
-                    RecipeRow(recipe: recipe)
-                }
-            }
-            .navigationTitle("Discover")
-        }
+//        NavigationView {
+//            List(recipes) {recipe in
+//                NavigationLink {
+//                    //RecipeDetail()
+//                } label: {
+//                    RecipeRow(recipe: recipe)
+//                }
+//            }
+//            .navigationTitle("Discover")
+//        }
+        Text("test")
     }
 }
 struct FavoritesView: View {

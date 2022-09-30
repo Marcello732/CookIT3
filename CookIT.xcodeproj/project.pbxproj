@@ -108,11 +108,10 @@
 				FAC0282928DAEBF2007382C3 /* ContentView.swift */,
 				FAC0282B28DAEBF5007382C3 /* Assets.xcassets */,
 				FAC0282D28DAEBF5007382C3 /* Preview Content */,
-				FAF3217328E7832B0070CD86 /* SingInUp.swift */,
-				FAF3217528E783880070CD86 /* Recipe.swift */,
-				FAF3217728E783AB0070CD86 /* RecipeRow.swift */,
-				FAF3217928E783EA0070CD86 /* ModelData.swift */,
-				39A060F628E7849700472BC6 /* Profile.swift */,
+				FAF3217B28E788550070CD86 /* SingInUp */,
+				FAF3217C28E7887B0070CD86 /* Recipe */,
+				FAF3217E28E788970070CD86 /* Resourses */,
+				FAF3217D28E7888C0070CD86 /* Profile */,
 			);
 			path = CookIT;
 			sourceTree = "<group>";
@@ -140,6 +139,39 @@
 				FAC0284428DAEBF5007382C3 /* CookITUITestsLaunchTests.swift */,
 			);
 			path = CookITUITests;
+			sourceTree = "<group>";
+		};
+		FAF3217B28E788550070CD86 /* SingInUp */ = {
+			isa = PBXGroup;
+			children = (
+				FAF3217328E7832B0070CD86 /* SingInUp.swift */,
+			);
+			path = SingInUp;
+			sourceTree = "<group>";
+		};
+		FAF3217C28E7887B0070CD86 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				FAF3217528E783880070CD86 /* Recipe.swift */,
+				FAF3217728E783AB0070CD86 /* RecipeRow.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		FAF3217D28E7888C0070CD86 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				39A060F628E7849700472BC6 /* Profile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FAF3217E28E788970070CD86 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				FAF3217928E783EA0070CD86 /* ModelData.swift */,
+			);
+			path = Resourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

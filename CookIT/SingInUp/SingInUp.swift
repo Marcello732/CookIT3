@@ -185,6 +185,6 @@ struct SuperSecureField: View {
 
 struct SingInUp_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SingInUp()
     }
 }
