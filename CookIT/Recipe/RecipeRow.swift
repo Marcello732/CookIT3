@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecipeRow: View {
-    //var recipe: Recipe
+    var recipe: Recipe
     @State private var isFavorite = true
     
     var body: some View {
@@ -18,7 +18,7 @@ struct RecipeRow: View {
             VStack() {
                 HStack() {
                     Spacer()
-                    Label("4,5", systemImage: "star.fill")
+                    Label(String(recipe.rating), systemImage: "star.fill")
                         .frame(width: 60, height: 5 )
                         .foregroundColor(Color("green"))
                         .padding()
@@ -45,16 +45,16 @@ struct RecipeRow: View {
                 .padding(.trailing, 15)
                 Spacer()
                 VStack(alignment: .leading) {
-                    Text("Penne Pomidorro")
+                    Text(recipe.name)
                         .font(.title)
                         .fontWeight(.heavy)
-                    Text("Lorem ipsum dolores resi tym hyb sfa")
+                    Text(recipe.description)
                 }
                 .foregroundColor(Color("white"))
                 .padding(.bottom, 20)
             }
         }
-        .background(Image("pasta")
+        .background(Image(recipe.imageName)
                         .resizable()
                         .scaledToFill()
                         .frame(width: .infinity, height: .infinity))
@@ -66,6 +66,6 @@ struct RecipeRow: View {
 
 struct RecipeRow_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeRow()
+        RecipeRow(recipe: recipes[0])
     }
 }

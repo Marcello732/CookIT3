@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		39A060F728E7849700472BC6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A060F628E7849700472BC6 /* Profile.swift */; };
+		FA0A125728E79B70009019D4 /* recipeData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA0A125628E79B70009019D4 /* recipeData.json */; };
 		FAC0282828DAEBF2007382C3 /* CookITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0282728DAEBF2007382C3 /* CookITApp.swift */; };
 		FAC0282A28DAEBF2007382C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0282928DAEBF2007382C3 /* ContentView.swift */; };
 		FAC0282C28DAEBF5007382C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC0282B28DAEBF5007382C3 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		39A060F628E7849700472BC6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		FA0A125628E79B70009019D4 /* recipeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipeData.json; sourceTree = "<group>"; };
 		FAC0282428DAEBF2007382C3 /* CookIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC0282728DAEBF2007382C3 /* CookITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookITApp.swift; sourceTree = "<group>"; };
 		FAC0282928DAEBF2007382C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		FAF3217E28E788970070CD86 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				FA0A125628E79B70009019D4 /* recipeData.json */,
 				FAF3217928E783EA0070CD86 /* ModelData.swift */,
 			);
 			path = Resourses;
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC0282F28DAEBF5007382C3 /* Preview Assets.xcassets in Resources */,
+				FA0A125728E79B70009019D4 /* recipeData.json in Resources */,
 				FAC0282C28DAEBF5007382C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

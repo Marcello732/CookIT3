@@ -18,10 +18,10 @@ struct Recipe: Hashable, Codable, Identifiable {
     var rating: Float
     var stickers: [String]
     var macros: [String : Int]
-    var ingredients: [String]
+    var ingredients: [String : String]
     var preparationSteps: [Int : String]
 
-    private var imageName: String
+    var imageName: String
     var image: Image {
         Image(imageName)
     }

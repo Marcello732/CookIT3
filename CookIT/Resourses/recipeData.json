@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "name": "Penne Pomodorro",
+        "description": "First pasta ever that you will taste the real tomatoes in",
+        "isFavorite": false,
+        "preparationTime": 30,
+        "difficultyLevel": 2,
+        "rating": 3.0,
+        "stickers":["Vegan","lactoseFree"],
+        "macros": {"calories":600,"protein":10,"carbs":80,"fat":8},
+        "ingredients":{"tomato":"2 cups","pasta":"300 grams","oil":"3 tsp"},
+        "preparationSteps":{"boil the pasta":1,"blanch tomatoes":2,"mixed everything together":3},
+        "imageName":"Penne Pomodorro"
+    },
+    {
+        "id": 2,
+        "name": "Pizza Margharita",
+        "description": "The chissiest and crustiest pizza you will ever make",
+        "isFavorite": true,
+        "preparationTime": 300,
+        "difficultyLevel": 4,
+        "rating": 4.7,
+        "stickers": ["lactoseFree"],
+        "macros": {"calories":800,"protein":11,"carbs":93,"fat":19},
+        "ingredients":{"cheese":"4,2 Oz","flour":"580 grams","oliveOil":"10 ml"},
+        "preparationSteps":{"make the dough":1,"let it rest":2,"assemble your pizza":3},
+        "imageName":"Pizza Margharita"
+    },
+    {
+        "id": 3,
+        "name": "Spaghetti Bolognese",
+        "description": "All the ingredients vibing with each other",
+        "isFavorite": false,
+        "preparationTime": 45,
+        "difficultyLevel": 3,
+        "rating": 4.0,
+        "stickers": ["lactoseFree"],
+        "macros": {"calories":400,"protein":21,"carbs":67,"fat":11},
+        "ingredients":{"beef":"4 handfuls","pasta":"230 grams","oil":"3 tsp"},
+        "preparationSteps":{"boil the pasta":1,"cook the beef":2,"mix mix in the pan":3},
+        "imageName":"Spaghetti Bolognese"
+    },
+    {
+        "id": 4,
+        "name": "Double Cheesburger",
+        "description": "Juicy, cheesy drippin' all over your hands",
+        "isFavorite": true,
+        "preparationTime": 35,
+        "difficultyLevel": 3,
+        "rating": 4.2,
+        "stickers": ["lactoseFree"],
+        "macros": {"calories":750,"protein":19,"carbs":49,"fat":16},
+        "ingredients":{"Bun":"2 piece","groundBeef":"443 grams","cheese":"2 piece"},
+        "preparationSteps":{"grill the paddies":1,"make special sauce":2,"assemble your burger":3},
+        "imageName": "Double Cheesburger"
+        
+    },
+    {
+        "id": 5,
+        "name": "Chicken soup",
+        "description": "Traditional soup your grandmother used to make", 
+        "isFavorite": true,
+        "preparationTime": 180,
+        "difficultyLevel": 2,
+        "rating": 4.9,
+        "stickers":["Bio"],
+        "macros": {"calories":320,"protein":7,"carbs":30,"fat":4},
+        "ingredients":{"chickenStock":"4 cups","pasta":"235 grams","carrot":"4 handfuls"},
+        "preparationSteps":{"make the stock":1,"cook veggies":2,"boil and add your pasta":3},
+        "imageName":"Chicken soup"
+    }
+]
