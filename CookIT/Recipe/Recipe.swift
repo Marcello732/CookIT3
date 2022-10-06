@@ -16,10 +16,10 @@ struct Recipe: Hashable, Codable, Identifiable {
     var preparationTime: Int
     var difficultyLevel: Int
     var rating: Float
-    var stickers: [String]
-    var macros: [String : Int]
-    var ingredients: [String : String]
-    var preparationSteps: [Int : String]
+    //var stickers: [String]
+    //var macros: [String : String]
+//    var ingredients: [String : String]
+//    var preparationSteps: [Int : String]
 
     var imageName: String
     var image: Image {

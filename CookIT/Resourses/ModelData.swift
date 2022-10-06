@@ -11,6 +11,7 @@ var recipes: [Recipe] = load("recipeData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
+    
 
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
     else {
@@ -30,4 +31,6 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
+
+
 
