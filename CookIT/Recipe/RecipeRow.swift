@@ -44,6 +44,7 @@ struct RecipeRow: View {
                 .padding(.trailing, 15)
                 Spacer()
                 VStack(alignment: .leading) {
+                    
                     Text(recipe.name)
                         .font(.title.bold())
                     Text(recipe.description[..<recipe.description.index(recipe.description.startIndex, offsetBy: 80)] + "...")

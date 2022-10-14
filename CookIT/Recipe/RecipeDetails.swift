@@ -74,6 +74,7 @@ struct RecipeDetails: View {
             Macros(recipe: recipe)
             
             Spacer()
+            
         }
         .frame(
               minWidth: 0,

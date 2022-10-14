@@ -19,6 +19,7 @@ struct Discover: View {
                         
                     }
                 }
+                
                     .navigationBarTitle("Discover")
                     //.toolbar(Color("green"), for: .na)
                     //.navigationBarHidden(true)

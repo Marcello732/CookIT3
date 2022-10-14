@@ -20,6 +20,7 @@ struct Favorites: View {
                         }
                     }
                 }
+                
                 .navigationBarTitle("Favorites")
                     //.toolbar(Color("green"), for: .na)
                     //.navigationBarHidden(true)
