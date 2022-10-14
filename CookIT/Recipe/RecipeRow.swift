@@ -40,18 +40,17 @@ struct RecipeRow: View {
                         .background(Color("white"))
                         .clipShape(Circle())
                 }
-                .frame(width: .infinity, height: 40)
                 .padding(5)
                 .padding(.trailing, 15)
                 Spacer()
                 VStack(alignment: .leading) {
                     Text(recipe.name)
-                        .font(.title)
-                        .fontWeight(.heavy)
-                    Text(recipe.description)
+                        .font(.title.bold())
+                    Text(recipe.description[..<recipe.description.index(recipe.description.startIndex, offsetBy: 80)] + "...")
                 }
                 .foregroundColor(Color("white"))
                 .padding(.bottom, 20)
+                .padding(.leading, 10)
             }
         }
         .background(Image(recipe.imageName)

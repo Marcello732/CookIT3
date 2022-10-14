@@ -42,7 +42,8 @@ struct SingInUp: View {
                         label: {Text("Sing in")}
                     )
                     .frame(width: 140, height: 25, alignment: .center)
-                    .background(isIn ? Color("green") : Color("gray").opacity(0.5))
+                    .background(isIn ? Color("green") : Color("gray"))
+                    .foregroundColor(isIn ? Color("white") : Color("green"))
                     .cornerRadius(10)
                     .id(isIn)
                     Button(
@@ -55,7 +56,8 @@ struct SingInUp: View {
                         label: {Text("Sing up")}
                     )
                     .frame(width: 140, height: 25, alignment: .center)
-                    .background(isUp ? Color("green") : Color("gray").opacity(0.5))
+                    .background(isUp ? Color("green") : Color("gray"))
+                    .foregroundColor(isUp ? Color("white") : Color("green"))
                     .cornerRadius(10)
                     .id(isUp)
                 }
