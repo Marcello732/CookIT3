@@ -52,7 +52,6 @@ struct RecipeRow: View {
                 .foregroundColor(Color("white"))
                 .padding(.bottom, 20)
                 .padding(.leading, 10)
-                
             }
         }
         .background(Image(recipe.imageName)
