@@ -7,6 +7,11 @@
         "preparationTime": 30,
         "difficultyLevel": 2,
         "rating": 3.0,
+        "stickers":["Vegan","lactoseFree"],
+        "macros": ["600","10","80","8"],
+        "ingredients":["tomato","pasta","oil"],
+        "amounts":["2 cups","300 grams","3 tsp"],
+        "preparationSteps":["boil the pasta","blanch tomatoes","mixed everything together"],
         "imageName":"Penne Pomodorro"
     },
     {
@@ -17,6 +22,11 @@
         "preparationTime": 300,
         "difficultyLevel": 4,
         "rating": 4.7,
+        "macros": ["800","11","93","19"],
+        "stickers": ["lactoseFree"],
+        "ingredients":["cheese","flour","oliveOil"],
+        "amounts":["4,2 Oz","580 grams","10 ml"],
+        "preparationSteps":["make the dough","let it rest","assemble your pizza"],
         "imageName":"Pizza Margharita"
     },
     {
@@ -27,6 +37,11 @@
         "preparationTime": 45,
         "difficultyLevel": 3,
         "rating": 4.0,
+        "macros": ["400","21","67","11"],
+        "stickers": ["lactoseFree"],
+        "ingredients":["beef","pasta","oil"],
+        "amounts":["4 handfuls","230 grams","3 tsp"],
+        "preparationSteps":["boil the pasta","cook the beef","mix mix in the pan"],
         "imageName":"Spaghetti Bolognese"
     },
     {
@@ -37,6 +52,11 @@
         "preparationTime": 35,
         "difficultyLevel": 3,
         "rating": 4.2,
+        "macros": ["750","19","49","16"],
+        "stickers": ["lactoseFree"],
+        "ingredients":["Bun","groundBeef","cheese"],
+        "amounts":["2 piece","443 grams","2 piece"],
+        "preparationSteps":["grill the paddies","make special sauce","assemble your burger"],
         "imageName": "Double Cheesburger"
 
     },
@@ -48,6 +68,11 @@
         "preparationTime": 180,
         "difficultyLevel": 2,
         "rating": 4.9,
+        "macros": ["320","7","30","1004"],
+        "stickers":["Bio"],
+        "ingredients":["chickenStock","pasta","carrot"],
+        "amounts":["4 cups","235 grams","4 handfuls"],
+        "preparationSteps":["make the stock","cook veggies","boil and add your pasta"],
         "imageName":"Chicken soup"
     }
 ]

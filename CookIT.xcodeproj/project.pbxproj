@@ -10,7 +10,9 @@
 		39A060F728E7849700472BC6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A060F628E7849700472BC6 /* Profile.swift */; };
 		FA0A125728E79B70009019D4 /* recipeData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA0A125628E79B70009019D4 /* recipeData.json */; };
 		FA45DC1528EEFC4100E5238F /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45DC1428EEFC4100E5238F /* RecipeDetails.swift */; };
-		FA5D621A28F9E54F009B7A84 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D621928F9E54F009B7A84 /* test.swift */; };
+		FA5D621C28FAC7D7009B7A84 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D621B28FAC7D7009B7A84 /* ForgotPassword.swift */; };
+		FA5D621E28FACC06009B7A84 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D621D28FACC06009B7A84 /* Verification.swift */; };
+		FA5D622028FAE676009B7A84 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D621F28FAE676009B7A84 /* HomeView.swift */; };
 		FAC0282828DAEBF2007382C3 /* CookITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0282728DAEBF2007382C3 /* CookITApp.swift */; };
 		FAC0282A28DAEBF2007382C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC0282928DAEBF2007382C3 /* ContentView.swift */; };
 		FAC0282C28DAEBF5007382C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC0282B28DAEBF5007382C3 /* Assets.xcassets */; };
@@ -47,7 +49,9 @@
 		39A060F628E7849700472BC6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		FA0A125628E79B70009019D4 /* recipeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipeData.json; sourceTree = "<group>"; };
 		FA45DC1428EEFC4100E5238F /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
-		FA5D621928F9E54F009B7A84 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		FA5D621B28FAC7D7009B7A84 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		FA5D621D28FACC06009B7A84 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
+		FA5D621F28FAE676009B7A84 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FAC0282428DAEBF2007382C3 /* CookIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC0282728DAEBF2007382C3 /* CookITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookITApp.swift; sourceTree = "<group>"; };
 		FAC0282928DAEBF2007382C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -157,6 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				FAF3217328E7832B0070CD86 /* SingInUp.swift */,
+				FA5D621B28FAC7D7009B7A84 /* ForgotPassword.swift */,
+				FA5D621D28FACC06009B7A84 /* Verification.swift */,
+				FA5D621F28FAE676009B7A84 /* HomeView.swift */,
 			);
 			path = SingInUp;
 			sourceTree = "<group>";
@@ -200,7 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				FAF91A0328F698280032544A /* Discover.swift */,
-				FA5D621928F9E54F009B7A84 /* test.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -336,17 +342,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5D621E28FACC06009B7A84 /* Verification.swift in Sources */,
 				FAF91A0128F695F20032544A /* Favorites.swift in Sources */,
+				FA5D622028FAE676009B7A84 /* HomeView.swift in Sources */,
 				FAC0282A28DAEBF2007382C3 /* ContentView.swift in Sources */,
 				FAC0282828DAEBF2007382C3 /* CookITApp.swift in Sources */,
 				FAF3217428E7832B0070CD86 /* SingInUp.swift in Sources */,
+				FA5D621C28FAC7D7009B7A84 /* ForgotPassword.swift in Sources */,
 				39A060F728E7849700472BC6 /* Profile.swift in Sources */,
 				FA45DC1528EEFC4100E5238F /* RecipeDetails.swift in Sources */,
 				FAF91A0428F698280032544A /* Discover.swift in Sources */,
 				FAF3217628E783880070CD86 /* Recipe.swift in Sources */,
 				FAF3217828E783AB0070CD86 /* RecipeRow.swift in Sources */,
 				FAF3217A28E783EA0070CD86 /* ModelData.swift in Sources */,
-				FA5D621A28F9E54F009B7A84 /* test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

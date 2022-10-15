@@ -26,7 +26,8 @@ struct RecipeRow: View {
                         .clipShape(Capsule())
  
                     Button(action: {
-                        isFavorite.toggle()
+                        withAnimation{isFavorite.toggle()}
+                        //isFavorite.toggle()
                     }, label: {
                         if isFavorite{
                             Image(systemName: "heart.fill")
@@ -40,14 +41,18 @@ struct RecipeRow: View {
                         .background(Color("white"))
                         .clipShape(Circle())
                 }
-                .padding(5)
+                .padding(10)
                 .padding(.trailing, 15)
                 Spacer()
                 VStack(alignment: .leading) {
                     
                     Text(recipe.name)
                         .font(.title.bold())
+                    if recipe.description.count > 80 {
                     Text(recipe.description[..<recipe.description.index(recipe.description.startIndex, offsetBy: 80)] + "...")
+                    }else{
+                        Text(recipe.description)
+                    }
                 }
                 .foregroundColor(Color("white"))
                 .padding(.bottom, 20)
@@ -60,7 +65,9 @@ struct RecipeRow: View {
                         .frame(width: .infinity, height: .infinity))
         .frame(width: .infinity, height: 200)
         .clipShape(RoundedRectangle(cornerRadius: 40.0))
-        .padding(10)
+        .padding(.leading, 10)
+        .padding(.trailing, 10)
+        .padding(.bottom, 10)
     }
 }
 

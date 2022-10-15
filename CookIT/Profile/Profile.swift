@@ -6,67 +6,108 @@
 //
 
 import SwiftUI
-extension Color {
-    static let appWhite = Color("appWhite")
-    static let appGreen = Color("appGreen")
-}
+//extension Color {
+//    static let appWhite = Color("appWhite")
+//    static let appGreen = Color("appGreen")
+//}
 
 struct Profile: View {
     var body: some View {
         
-        VStack(alignment: .leading){
+        VStack(){
             
             HStack(){
                 Image("andrzej")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width:.infinity,height:80)
+                    
                     .clipShape(Circle())
                     .shadow(radius: 7)
-                    .background(Color.appWhite)
-                VStack{
-                    HStack{
-                        Text("13")
-                           .font(.system(size: 17))
-                         .padding()
-                         .background(.blue)
-                         .clipShape(Circle())
-                         .frame(width: 50  , height: 50)
-                       Text("347")
-                           .font(.system(size: 17))
-                         .padding()
-                         .background(.blue)
-                         .clipShape(Circle())
-                       Image(systemName: "gearshape")
-                           .font(.system(size: 20.0))
-                         .padding()
-                         .background(.blue)
-                         .clipShape(Circle())
-                    }
-                    .padding(5)
+                    .frame(width: 90 ,height:90)
+                    .padding(.leading, 20)
+                    //.background(Color("white"))
+//                VStack{
+//                    HStack{
+//                        Text("13")
+//                           .font(.system(size: 17))
+//                         .padding()
+//                         .background(Color("white"))
+//                         .clipShape(Circle())
+//                         .frame(width: 50  , height: 50)
+//                       Text("347")
+//                           .font(.system(size: 17))
+//                         .padding()
+//                         .background(Color("white"))
+//                         .clipShape(Circle())
+//                       Image(systemName: "gearshape")
+//                           .font(.system(size: 20.0))
+//                         .padding()
+//                         .background(Color("white"))
+//                         .clipShape(Circle())
+//                    }
+//                    .foregroundColor(Color("green"))
+//                    .font(.body.bold())
+//                    .padding(5)
+//
+//               HStack(spacing:20){
+//                           Text("Recipes")
+//                           Text("Favorites")
+//                           Text("Settings")
+//
+//                                                   }
+//                }
                 
-               HStack(spacing:20){
-                           Text("Recipes")
-                           Text("Favorites")
-                           Text("Settings")
-               
-                                                   }
+                HStack (alignment: .firstTextBaseline , spacing: 20){
+                    VStack{
+                        Text("69")
+                            .font(.body.bold())
+                         .padding()
+                         .background(Color("white"))
+                         .foregroundColor(Color("green"))
+                         .clipShape(Circle())
+                         .frame(width: 60, height: 60)
+                        Text("Recipes")
+                    }
+                    VStack{
+                        Text("347")
+                            .font(.body.bold())
+                         .padding()
+                         .background(Color("white"))
+                         .foregroundColor(Color("green"))
+                         .clipShape(Circle())
+                         .frame(width: 60, height: 60)
+                        Text("Favorites")
+                    }
+                    VStack{
+                        Image(systemName: "gearshape")
+                            .font(.body.bold())
+                          .padding()
+                          .background(Color("white"))
+                          .foregroundColor(Color("green"))
+                          .clipShape(Circle())
+                          .frame(width: 60  , height: 60)
+                        Text("Settings")
+                    }
                 }
-                .frame(width: 250)
+                .frame(width: 260)
                 
             }
-            .frame(width: .infinity, height: 80)
-            .padding(5)
+            .frame(width: .infinity, height: 90)
+            //.padding(5)
             
-                VStack{
-                    Text("Andrzej Piaseczny")
-                                            .font(.system(size: 13, weight: .heavy, design: .default))
-                                            .multilineTextAlignment(.leading)
-                                            .frame( width: .infinity)
-                    
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ")
-                }
-                .frame(width: .infinity)
+            VStack(alignment: .leading, spacing: 5){
+                Text("Andrzej Piaseczny")
+                    .font(.title3.bold())
+                    .multilineTextAlignment(.leading)
+                    .frame( width: .infinity)
+                
+                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ")
+                    .font(.body)
+            }
+            .padding(.leading, 20)
+            .padding(.top, 10)
+            .padding(.bottom, 10)
+            .frame(width: .infinity)
             
             HStack{
                 Spacer()
@@ -80,15 +121,20 @@ struct Profile: View {
                         .foregroundColor(Color.black)
                 }
                 Spacer()
-                
-                
-            }.buttonStyle(.bordered)
-            Spacer()
+            }
+            .buttonStyle(.bordered)
             
-        
+            Spacer()
         }
-        .background(Color.appWhite)
-        
+        .frame(
+              minWidth: 0,
+              maxWidth: .infinity,
+              minHeight: 0,
+              maxHeight: .infinity,
+              alignment: .topLeading
+        )
+        .ignoresSafeArea(.all, edges: .bottom)
+        .background(Color("gray"))
         }
     
     }
@@ -96,6 +142,6 @@ struct Profile: View {
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
         
-        ContentView()
+        Profile()
     }
 }

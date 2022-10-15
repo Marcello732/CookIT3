@@ -20,61 +20,66 @@ struct RecipeDetails: View {
     @State private var isFavorite = true
 
     var body: some View {
-        VStack {
-            ImageAndName(recipe: recipe, isFavorite: isFavorite)
-            
-            HStack() {
-                Spacer()
-                Text(String(recipe.preparationTime) + " min")
-                    .frame(width: 70, height: 5 )
-                    .foregroundColor(Color("white"))
-                    .padding()
-                    .background(Color("green"))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                Spacer()
-                Text(difficultyLevelDict[recipe.difficultyLevel] ?? "Medium")
-                    .frame(width: 70, height: 5 )
-                    .foregroundColor(backgroundColor(for: recipe.difficultyLevel))
-                    .padding()
-                    .background(Color("green"))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                Spacer()
-                Text(String(recipe.rating))
-                    .frame(width: 70, height: 5 )
-                    .foregroundColor(Color("white"))
-                    .padding()
-                    .background(Color("green"))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                Spacer()
-            }
-            .font(.body.bold())
-            .frame(width: .infinity)
-
-    
-            
-            VStack (alignment: .leading, spacing: 20) {
-                HStack {
-                    Text("Description")
-                        .font(.title.bold())
-                        .padding(.top, 10)
+        ScrollView {
+            VStack {
+                ImageAndName(recipe: recipe, isFavorite: isFavorite)
+                
+                HStack() {
+                    Spacer()
+                    Text(String(recipe.preparationTime) + " min")
+                        .frame(width: 70, height: 5 )
+                        .foregroundColor(Color("white"))
+                        .padding()
+                        .background(Color("green"))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    Spacer()
+                    Text(difficultyLevelDict[recipe.difficultyLevel] ?? "Medium")
+                        .frame(width: 70, height: 5 )
+                        .foregroundColor(backgroundColor(for: recipe.difficultyLevel))
+                        .padding()
+                        .background(Color("green"))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    Spacer()
+                    Text(String(recipe.rating))
+                        .frame(width: 70, height: 5 )
+                        .foregroundColor(Color("white"))
+                        .padding()
+                        .background(Color("green"))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                     Spacer()
                 }
-                //Spacer()
-                Text(recipe.description)
-                    .font(.body)
-                    .frame(width: .infinity)
+                .font(.body.bold())
+                .frame(width: .infinity)
+
+        
+                
+                VStack (alignment: .leading, spacing: 20) {
+                    HStack {
+                        Text("Description")
+                            .font(.title.bold())
+                            .padding(.top, 10)
+                        Spacer()
+                    }
+                    //Spacer()
+                    Text(recipe.description)
+                        .font(.body)
+                        .frame(width: .infinity)
+                }
+                .foregroundColor(Color("green"))
+                .padding(.leading, 20)
+                .padding(.trailing, 20)
+    //            .padding(.top, 10)
+    //            .padding(.bottom, 10) //zobaczymy czy dodac
+                .frame(width: .infinity)
+                
+                Macros(recipe: recipe)
+                
+                Ingredients(recipe: recipe)
+                
+                PreparationSteps(recipe: recipe)
+                Spacer()
+                
             }
-            .foregroundColor(Color("green"))
-            .padding(.leading, 20)
-            .padding(.trailing, 20)
-//            .padding(.top, 10)
-//            .padding(.bottom, 10) //zobaczymy czy dodac
-            .frame(width: .infinity)
-            
-            Macros(recipe: recipe)
-            
-            Spacer()
-            
         }
         .frame(
               minWidth: 0,
@@ -84,7 +89,7 @@ struct RecipeDetails: View {
               alignment: .topLeading
         )
         .ignoresSafeArea()
-        .background(Color("white"))
+        .background(Color("gray"))
     }
 }
 
@@ -204,7 +209,7 @@ struct Macros: View {
             Spacer()
         }
         HStack() {
-            Label("500", systemImage: "flame")
+            Label(recipe.macros[0], systemImage: "flame")
                 .font(.subheadline)
                 .frame(width: 70, height: 30)
                 .foregroundColor(Color("white"))
@@ -212,7 +217,7 @@ struct Macros: View {
                 .background(Color("green"))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             Spacer()
-            Label("500", systemImage: "fish")
+            Label(recipe.macros[1], systemImage: "fish")
                 .font(.subheadline)
                 .frame(width: 70, height: 30)
                 .foregroundColor(Color("white"))
@@ -220,7 +225,7 @@ struct Macros: View {
                 .background(Color("green"))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             Spacer()
-            Label("500", systemImage: "laurel.trailing")
+            Label(recipe.macros[2], systemImage: "laurel.trailing")
                 .font(.subheadline)
                 .frame(width: 70, height: 30)
                 .foregroundColor(Color("white"))
@@ -228,7 +233,7 @@ struct Macros: View {
                 .background(Color("green"))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             Spacer()
-            Label("500", systemImage: "drop.degreesign")
+            Label(recipe.macros[3], systemImage: "drop.degreesign")
                 .font(.subheadline)
                 .frame(width: 70, height: 30)
                 .foregroundColor(Color("white"))
@@ -237,6 +242,70 @@ struct Macros: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
         }
         .frame(width: .infinity)
+    }
+    .foregroundColor(Color("green"))
+    .padding(.leading, 20)
+    .padding(.trailing, 20)
+//            .padding(.top, 10)
+//            .padding(.bottom, 10) //zobaczymy czy dodac
+    .frame(width: .infinity)
+}
+}
+
+struct Ingredients: View {
+    var recipe: Recipe
+    
+    var body: some View{
+    VStack (alignment: .leading) {
+        HStack {
+            Text("Ingredients")
+                .font(.title.bold())
+                .padding(.top, 10)
+            Spacer()
+        }
+        ForEach(0..<recipe.ingredients.count){ number in
+            Text(recipe.amounts[number] + " " + recipe.ingredients[number])
+                .font(.subheadline)
+                .foregroundColor(Color("white"))
+                .padding(8)
+                .background(Color("green"))
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                //.frame(width: .infinity, height: 30)
+            Spacer()
+        }
+    }
+    .foregroundColor(Color("green"))
+    .padding(.leading, 20)
+    .padding(.trailing, 20)
+//            .padding(.top, 10)
+//            .padding(.bottom, 10) //zobaczymy czy dodac
+    .frame(width: .infinity)
+}
+}
+
+struct PreparationSteps: View {
+    var recipe: Recipe
+    
+    var body: some View{
+    VStack (alignment: .leading) {
+        HStack {
+            Text("Preparation")
+                .font(.title.bold())
+                .padding(.top, 10)
+            Spacer()
+        }
+        ForEach(0..<recipe.preparationSteps.count){ number in
+            VStack(alignment: .leading) {
+                Text(String(number + 1) + ". " + recipe.preparationSteps[number])
+                    .font(.subheadline)
+                
+                Rectangle()
+                    .frame(width: .infinity/2, height: 2)
+            }
+            .foregroundColor(Color("green"))
+            .frame(width: .infinity)
+            Spacer()
+        }
     }
     .foregroundColor(Color("green"))
     .padding(.leading, 20)

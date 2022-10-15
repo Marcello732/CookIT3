@@ -9,20 +9,24 @@ import Foundation
 import SwiftUI
 
 struct Recipe: Hashable, Codable, Identifiable {
-    var id: Int
-    var name: String
-    var description: String
-    var isFavorite: Bool
-    var preparationTime: Int
-    var difficultyLevel: Int
-    var rating: Float
-    //var stickers: [String]
-    //var macros: [String : String]
-//    var ingredients: [String : String]
-//    var preparationSteps: [Int : String]
+    let id: Int
+    let name: String
+    let description: String
+    let isFavorite: Bool
+    let preparationTime: Int
+    let difficultyLevel: Int
+    let rating: Float
+//    var stickers: [String]
+//    var macros: [String]
+    let stickers, macros, ingredients, amounts, preparationSteps: [String]
+//    var preparationSteps: [String]
 
-    var imageName: String
+    let imageName: String
     var image: Image {
         Image(imageName)
     }
+    
+//    struct Macros {
+//        let calories, protein, carbs, fat: Int
+//    }
 }

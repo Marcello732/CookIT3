@@ -16,17 +16,17 @@ struct Discover: View {
                         NavigationLink(
                             destination: RecipeDetails(recipe: recipe), label:{ RecipeRow(recipe: recipe)}
                         )
-                        
                     }
                 }
-                
-                    .navigationBarTitle("Discover")
+                .navigationBarTitle("Discover")
+                   
                     //.toolbar(Color("green"), for: .na)
                     //.navigationBarHidden(true)
 //                .navigationTitle("Discover")
 //                .navigationBarTitleDisplayMode(.large)
 //                .navigationBarBackButtonHidden(true)
             }
+            .background(Color("gray"))
         }
         
     }

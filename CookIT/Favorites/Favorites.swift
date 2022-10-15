@@ -29,6 +29,7 @@ struct Favorites: View {
 //                .navigationBarBackButtonHidden(true)
             }
         }
+        .background(Color("gray"))
     }
 }
 

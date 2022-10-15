@@ -15,6 +15,7 @@ struct SingInUp: View {
     @State var userEmail: String = ""
     @State var userLogin: String = ""
     @State var userPassword: String = ""
+    @Binding var noLoginView: Bool
     
     var body: some View {
         VStack (alignment: .center){
@@ -65,7 +66,7 @@ struct SingInUp: View {
             }
             .frame(width: 300, height: 35)
             .font(.body.bold())
-            .background(Color("gray"))
+            .background(Color("white"))
             .cornerRadius(10)
             .padding(5)
             .foregroundColor(Color("white"))
@@ -104,7 +105,9 @@ struct SingInUp: View {
             .frame(width: 260, height: 40)
             Spacer()
             Button(
-                action: {},
+                action: {
+                    self.noLoginView.toggle()
+                },
                 label: {isLogIn ? Text("Log in") : Text("Register")}
             )
             .frame(width: 200, height: 40, alignment: .center)
@@ -115,7 +118,9 @@ struct SingInUp: View {
             .id(isLogIn)
             
             Button(
-                action: {},
+                action: {
+                    
+                },
                 label: {isForgotPassword ? Text("Forgot password?") : Text("")}
             )
             .frame(width: 200, height: 30, alignment: .center)
@@ -124,7 +129,7 @@ struct SingInUp: View {
             .id(isForgotPassword)
             Spacer()
         }
-        .background(Color("white"))
+        .background(Color("gray"))
         .frame(
               minWidth: 0,
               maxWidth: .infinity,
@@ -144,20 +149,23 @@ struct SuperTextField: View {
     var commit: ()->() = { }
     
     var body: some View {
-        HStack {
-            Text(placeholder)
-                .foregroundColor(Color("green"))
-                .padding(.leading, 16)
-            TextField(placeholder, text: $text)
-                .textFieldStyle(PlainTextFieldStyle())
-                .tint(Color("green"))
-                .foregroundColor(Color("green"))
-                .keyboardType(.default)
+        VStack {
+            HStack {
+                Text(placeholder)
+                    .foregroundColor(Color("green"))
+                    .padding(.leading, 16)
+                TextField(placeholder, text: $text)
+                    .textFieldStyle(PlainTextFieldStyle())
+                    .tint(Color("green"))
+                    .foregroundColor(Color("green"))
+                    .keyboardType(.default)
+            }
+            Rectangle()
+                 .frame(height: 2)
+                 .foregroundColor(Color("green"))
+                 .padding(.leading, 16)
+                 .padding(.trailing, 16)
         }
-        Divider()
-         .frame(height: 1)
-         .padding(.horizontal, 30)
-         .background(Color("gray"))
     }
 }
 
@@ -167,26 +175,30 @@ struct SuperSecureField: View {
     @Binding var text: String
     
     var body: some View {
-        HStack {
-            Text(placeholder)
-                .foregroundColor(Color("green"))
-                .padding(.leading, 16)
-            SecureField(placeholder, text: $text)
-                .textFieldStyle(PlainTextFieldStyle())
-                .tint(Color("green"))
-                .foregroundColor(Color("green"))
-                .keyboardType(.default)
+        VStack {
+            HStack {
+                Text(placeholder)
+                    .foregroundColor(Color("green"))
+                    .padding(.leading, 16)
+                SecureField(placeholder, text: $text)
+                    .textFieldStyle(PlainTextFieldStyle())
+                    .tint(Color("green"))
+                    .foregroundColor(Color("green"))
+                    .keyboardType(.default)
+            }
+            Rectangle()
+                 .frame(height: 2)
+                 .foregroundColor(Color("green"))
+                 .padding(.leading, 16)
+                 .padding(.trailing, 16)
         }
-        Divider()
-         .frame(height: 1)
-         .padding(.horizontal, 30)
-         .background(Color("gray"))
     }
 }
 
 
 struct SingInUp_Previews: PreviewProvider {
     static var previews: some View {
-        SingInUp()
+        HomeView()
+        
     }
 }
