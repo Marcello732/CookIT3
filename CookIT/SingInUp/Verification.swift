@@ -18,6 +18,7 @@ struct VerificationView: View {
             }
         }
         
+        
     }
 }
 
