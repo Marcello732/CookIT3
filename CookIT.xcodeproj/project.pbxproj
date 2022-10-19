@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		39A060F728E7849700472BC6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A060F628E7849700472BC6 /* Profile.swift */; };
+		FA01998D28FFE04F00EAD8D5 /* profileData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA01998C28FFE04F00EAD8D5 /* profileData.json */; };
 		FA0A125728E79B70009019D4 /* recipeData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA0A125628E79B70009019D4 /* recipeData.json */; };
 		FA45DC1528EEFC4100E5238F /* RecipeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA45DC1428EEFC4100E5238F /* RecipeDetails.swift */; };
 		FA5D621C28FAC7D7009B7A84 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D621B28FAC7D7009B7A84 /* ForgotPassword.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		39A060F628E7849700472BC6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		FA01998C28FFE04F00EAD8D5 /* profileData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profileData.json; sourceTree = "<group>"; };
 		FA0A125628E79B70009019D4 /* recipeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipeData.json; sourceTree = "<group>"; };
 		FA45DC1428EEFC4100E5238F /* RecipeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetails.swift; sourceTree = "<group>"; };
 		FA5D621B28FAC7D7009B7A84 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		FAF3217E28E788970070CD86 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				FA01998C28FFE04F00EAD8D5 /* profileData.json */,
 				FA0A125628E79B70009019D4 /* recipeData.json */,
 				FAF3217928E783EA0070CD86 /* ModelData.swift */,
 			);
@@ -318,6 +321,7 @@
 				FAC0282F28DAEBF5007382C3 /* Preview Assets.xcassets in Resources */,
 				FA0A125728E79B70009019D4 /* recipeData.json in Resources */,
 				FAC0282C28DAEBF5007382C3 /* Assets.xcassets in Resources */,
+				FA01998D28FFE04F00EAD8D5 /* profileData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

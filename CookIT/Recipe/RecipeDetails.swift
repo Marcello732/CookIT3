@@ -77,10 +77,15 @@ struct RecipeDetails: View {
                 Ingredients(recipe: recipe)
                 
                 PreparationSteps(recipe: recipe)
+                
+                Author(recipe: recipe)
+                
+                Reviews(recipe: recipe)
                 Spacer()
                 
             }
         }
+        .padding(.bottom, 80)
         .frame(
               minWidth: 0,
               maxWidth: .infinity,
@@ -296,12 +301,12 @@ struct PreparationSteps: View {
         }
         ForEach(0..<recipe.preparationSteps.count){ number in
             VStack(alignment: .leading) {
-                Text(String(number + 1) + ". " + recipe.preparationSteps[number])
+                Text(String(number + 1) + ". " +  recipe.preparationSteps[number])
                     .font(.subheadline)
                 
                 Rectangle()
-                    .frame(width: .infinity/2, height: 2)
-            }
+                    .frame(width: .infinity, height: 1)
+            }.padding(.top, 5)
             .foregroundColor(Color("green"))
             .frame(width: .infinity)
             Spacer()
@@ -314,6 +319,149 @@ struct PreparationSteps: View {
 //            .padding(.bottom, 10) //zobaczymy czy dodac
     .frame(width: .infinity)
 }
+}
+
+struct Author: View {
+    var recipe: Recipe
+    
+    var body: some View{
+        HStack () {
+            Text("Author")
+                .font(.title2.bold())
+            
+            Text(recipe.author)
+                .font(.title2)
+            Spacer()
+        }
+        .foregroundColor(Color("green"))
+        .foregroundColor(Color("green"))
+        .padding(.leading, 20)
+        .padding(.trailing, 20)
+        .padding(.top, 10)
+    //            .padding(.top, 10)
+    //            .padding(.bottom, 10) //zobaczymy czy dodac
+        .frame(width: .infinity)
+    }
+}
+
+
+//to jeszcze do dorobienia
+//tzn te iconki profili w reviews
+struct Reviews: View {
+    var recipe: Recipe
+    
+    var body: some View{
+        HStack () {
+            VStack (alignment: .leading) {
+                HStack () {
+                Image("star_empty")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 30, height: 30)
+                Image("star_empty")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 30, height: 30)
+                Image("star_empty")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 30, height: 30)
+                Image("star_empty")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 30, height: 30)
+                Image("star_empty")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 30, height: 30)
+                }
+                Text("2.2k reviews")
+                    .foregroundColor(Color("white"))
+                    .font(.subheadline.bold())
+            }
+            
+            .padding(.leading, 10)
+            .padding(.top, 5)
+            .padding(.bottom, 5)
+            Spacer()
+            ZStack () {
+                HStack() {
+                Button(
+                    action: {
+                    },
+                    label: {
+                        Image(systemName: "heart.fill")
+                    }
+                )
+                .frame(width: 40, height: 40)
+                .background(Color("white"))
+                .foregroundColor(Color("green"))
+                .clipShape(Circle())
+                    Button(
+                        action: {
+                        },
+                        label: {
+                            Image(systemName: "heart.fill")
+                        }
+                    )
+                    .frame(width: 40, height: 40)
+                    .background(Color("green"))
+                    .foregroundColor(Color("green"))
+                    .clipShape(Circle())
+                    Button(
+                        action: {
+                        },
+                        label: {
+                            Image(systemName: "heart.fill")
+                        }
+                    )
+                    .frame(width: 40, height: 40)
+                    .background(Color("gray"))
+                    .foregroundColor(Color("green"))
+                    .clipShape(Circle())
+                }
+            }
+            .padding(.trailing, 10)
+        }
+        .background(Color("dark_gray"))
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .frame(width: .infinity, height: 80)
+        .padding(.leading, 20)
+        .padding(.trailing, 20)
+        
+//        Label(recipe.macros[0], systemImage: "flame")
+//            .font(.subheadline)
+//            .frame(width: 340, height: 60)
+//            .foregroundColor(Color("white"))
+//            .padding(2)
+//            .background(Color("green"))
+//            .clipShape(RoundedRectangle(cornerRadius: 10))
+//    VStack (alignment: .leading) {
+//        HStack {
+//            Text("Reviews")
+//                .font(.title.bold())
+//                .padding(.top, 10)
+//            Spacer()
+//        }
+//        ForEach(0..<recipe.preparationSteps.count){ number in
+//            VStack(alignment: .leading) {
+//                Text(String(number + 1) + ". " + recipe.preparationSteps[number])
+//                    .font(.subheadline)
+//
+//                Rectangle()
+//                    .frame(width: .infinity, height: 1)
+//            }
+//            .foregroundColor(Color("green"))
+//            .frame(width: .infinity)
+//            Spacer()
+//        }
+    }
+//    .foregroundColor(Color("green"))
+//    .padding(.leading, 20)
+//    .padding(.trailing, 20)
+////            .padding(.top, 10)
+////            .padding(.bottom, 10) //zobaczymy czy dodac
+//    .frame(width: .infinity)
 }
 
 struct RecipeDetails_Previews: PreviewProvider {

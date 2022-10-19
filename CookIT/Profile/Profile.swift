@@ -12,6 +12,7 @@ import SwiftUI
 //}
 
 struct Profile: View {
+    var authorRecipes:[Recipe] = []
     var body: some View {
         
         VStack(){
@@ -125,6 +126,26 @@ struct Profile: View {
             .buttonStyle(.bordered)
             
             Spacer()
+            
+            NavigationView {
+                ScrollView {
+                    VStack{
+                        ForEach(recipes, id:\.id) { recipe in
+                            if recipe.author == "Adam" {
+                                NavigationLink(
+                                    destination: RecipeDetails(recipe: recipe), label:{ RecipeRow(recipe: recipe)}
+                                )
+                            }
+                        }
+                    }
+                        //.toolbar(Color("green"), for: .na)
+                        //.navigationBarHidden(true)
+    //                .navigationTitle("Discover")
+    //                .navigationBarTitleDisplayMode(.large)
+    //                .navigationBarBackButtonHidden(true)
+                }
+                .background(Color("gray"))
+            }
         }
         .frame(
               minWidth: 0,

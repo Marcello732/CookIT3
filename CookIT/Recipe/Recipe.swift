@@ -16,6 +16,7 @@ struct Recipe: Hashable, Codable, Identifiable {
     let preparationTime: Int
     let difficultyLevel: Int
     let rating: Float
+    let author: String
 //    var stickers: [String]
 //    var macros: [String]
     let stickers, macros, ingredients, amounts, preparationSteps: [String]
