@@ -17,8 +17,6 @@ struct VerificationView: View {
                 SingInUp(noLoginView: $successVerificationView)
             }
         }
-        
-        
     }
 }
 
