@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		39A060F728E7849700472BC6 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A060F628E7849700472BC6 /* Profile.swift */; };
+		39C6040A292573D600A2B1D8 /* AddRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C60409292573D600A2B1D8 /* AddRecipe.swift */; };
 		FA01998D28FFE04F00EAD8D5 /* profileData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA01998C28FFE04F00EAD8D5 /* profileData.json */; };
 		FA0A125728E79B70009019D4 /* recipeData.json in Resources */ = {isa = PBXBuildFile; fileRef = FA0A125628E79B70009019D4 /* recipeData.json */; };
 		FA1F2329291DBC5300EE89FF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1F2328291DBC5300EE89FF /* Network.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		39A060F628E7849700472BC6 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		39C60409292573D600A2B1D8 /* AddRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipe.swift; sourceTree = "<group>"; };
 		FA01998C28FFE04F00EAD8D5 /* profileData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profileData.json; sourceTree = "<group>"; };
 		FA0A125628E79B70009019D4 /* recipeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipeData.json; sourceTree = "<group>"; };
 		FA1F2328291DBC5300EE89FF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39C60408292573CA00A2B1D8 /* AddRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				39C60409292573D600A2B1D8 /* AddRecipe.swift */,
+			);
+			path = AddRecipe;
+			sourceTree = "<group>";
+		};
 		FA1F2323291DBC0D00EE89FF /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 		FAC0282628DAEBF2007382C3 /* CookIT */ = {
 			isa = PBXGroup;
 			children = (
+				39C60408292573CA00A2B1D8 /* AddRecipe */,
 				FA1F2323291DBC0D00EE89FF /* Network */,
 				FAF91A0228F698170032544A /* Discover */,
 				FAF919FF28F695DB0032544A /* Favorites */,
@@ -371,6 +382,7 @@
 				FA1F232B291DBC8400EE89FF /* User.swift in Sources */,
 				FA45DC1528EEFC4100E5238F /* RecipeDetails.swift in Sources */,
 				FAF91A0428F698280032544A /* Discover.swift in Sources */,
+				39C6040A292573D600A2B1D8 /* AddRecipe.swift in Sources */,
 				FAF3217628E783880070CD86 /* Recipe.swift in Sources */,
 				FAF3217828E783AB0070CD86 /* RecipeRow.swift in Sources */,
 				FA1F2329291DBC5300EE89FF /* Network.swift in Sources */,
