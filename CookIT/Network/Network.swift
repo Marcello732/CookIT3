@@ -12,6 +12,7 @@ class Network: ObservableObject {
 
     func getUsers() {
         guard let url = URL(string: "localhost:8080/users") else { fatalError("Missing URL") }
+        //request.httpMethod = "GET"
 
         let urlRequest = URLRequest(url: url)
 

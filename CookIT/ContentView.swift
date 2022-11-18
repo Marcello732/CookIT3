@@ -7,39 +7,45 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct ContentView: View {
     @EnvironmentObject var network: Network
-    
+
     var body: some View {
-            ScrollView {
-                    Text("All users!!!")
-                    .font(.title).bold()
-                
-                VStack(alignment: .leading) {
-                    ForEach(network.users) { user in
-                        HStack(alignment:.top) {
-                            Text("\(user.id)")
+        ScrollView {
+            Text("All users")
+                .font(.title)
+                .bold()
 
-                            VStack(alignment: .leading) {
-                                Text(user.name)
-                                    .bold()
+            VStack(alignment: .leading) {
+                ForEach(network.users) { user in
+                    HStack(alignment:.top) {
+                        Text("\(user.id)")
 
-                                Text(user.email.lowercased())
+                        VStack(alignment: .leading) {
+                            Text(user.login)
+                                .bold()
 
-                                Text(user.phone)
-                            }
+                            Text(user.firstName)
+
+                            Text(user.email.lowercased())
                         }
-                        .frame(width: 300, alignment: .leading)
-                        .padding()
-                        .background(Color(#colorLiteral(red: 0.6667672396, green: 0.7527905703, blue: 1, alpha: 0.2662717301)))
-                        .cornerRadius(20)
                     }
+                    .frame(width: 300, alignment: .leading)
+                    .padding()
+                    .background(Color(#colorLiteral(red: 0.6667672396, green: 0.7527905703, blue: 1, alpha: 0.2662717301)))
+                    .cornerRadius(20)
                 }
             }
-            .onAppear {
-                    network.getUsers()
-            }
+
+        }
+        .padding(.vertical)
+        .onAppear {
+            network.getUsers()
+        }
     }
+}
     
 // --------------------------------------
     
@@ -121,7 +127,7 @@ struct ContentView: View {
 //            )
 //
 //    }
-}
+//}
 
 struct AddRecipeView: View {
     var body: some View {
